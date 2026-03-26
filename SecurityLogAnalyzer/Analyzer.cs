@@ -36,15 +36,24 @@ public class Analyzer
         var alerts = new List<string>();
         foreach (var group in ipGroups)
         {
+            // group consist of {string ip, <List>LogEntry events}
+            // group.Events = [10:00, 10:02, 10:05, ..., 10:50]
             var events = group.Events;
-            for (int i = 0; i < events.Count - 9; i++)
-            {
-                var window = events.Skip(i).Take(10);
-                var firstTime = window.First().Timestamp;
-                var lastTime = window.Last().Timestamp;
 
-                if ((lastTime - firstTime).TotalMinutes <= 60)
+            // sliding window start position
+            // events.Count - 9 ensures that there are atleast 10 events
+            // IP "192.168.1.5": 3 failed logins → Count=3 → 3-9=-6 → loop skips → safe, no alert
+            // IP "192.168.1.42": 847 fails → 847 - 9 = 838 → 838 windows checked
+            int windowLen = 10;
+            for (int i = 0; i < events.Count - windowLen - 1; i++)
+            {
+                var window = events.Skip(i).Take(windowLen); // Get 10 consecutive events
+                var firstTime = window.First().Timestamp; // Earliest in the window
+                var lastTime = window.Last().Timestamp; // Latest in window
+
+                if ((lastTime - firstTime).TotalMinutes <= 60) // if there are 10 fails in less than 1 hour
                 {
+                    // Send the alert
                     alerts.Add($"ALERT: Brute-force on {group.Ip}: 10+ fails in {(lastTime - firstTime):mm\\:ss}");
                     break;
                 }
