@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vtv4JL4cHqEfgQH6QK2uN+GvppMiyf8X5//OywOr1sPXgL+9ofgsaVcxKz06nqe5sD5HVEiOuYZvjFSbyHmDxg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\longh\\OneDrive\\Desktop\\CodeX\\SecurityLogAnalyzer\\SecurityLogAnalyzer\\SecurityLogAnalyzer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\longh\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}

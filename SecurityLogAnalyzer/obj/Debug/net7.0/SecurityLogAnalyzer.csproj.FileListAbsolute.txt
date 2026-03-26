@@ -1,0 +1,17 @@
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\SecurityLogAnalyzer.exe
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\SecurityLogAnalyzer.deps.json
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\SecurityLogAnalyzer.runtimeconfig.json
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\SecurityLogAnalyzer.dll
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\SecurityLogAnalyzer.pdb
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.csproj.AssemblyReference.cache
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.AssemblyInfoInputs.cache
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.AssemblyInfo.cs
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.csproj.CopyComplete
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.dll
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\refint\SecurityLogAnalyzer.dll
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.pdb
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\SecurityLogAnalyzer.genruntimeconfig.cache
+C:\Users\longh\OneDrive\Desktop\CodeX\SecurityLogAnalyzer\SecurityLogAnalyzer\obj\Debug\net7.0\ref\SecurityLogAnalyzer.dll
