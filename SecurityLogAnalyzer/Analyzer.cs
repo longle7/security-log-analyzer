@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 
 namespace SecurityLogAnalyzer;  // Matches your project
@@ -79,6 +79,25 @@ public class Analyzer
         Console.WriteLine($"\nProcessed 1M logs in {sw.ElapsedMilliseconds}ms ({sw.ElapsedMilliseconds / 1000.0:F1}s)");
         Console.WriteLine($"Alert rate: {alerts.Count / (sw.ElapsedMilliseconds / 1000.0):F0}/sec");
     }
+
+    // Format: <timestamp> [SECURITY] User '<user>' <action, may be multi-word> from <ip>
+    private static readonly Regex SecurityLinePattern =
+        new(@"^(\S+) \[SECURITY\] User '([^']*)' (.+) from (\S+)$", RegexOptions.Compiled);
+
+    public static SecurityEvent? ParseLogLine(string line)
+    {
+        // Returns null for non-security or malformed lines instead of throwing
+        var match = SecurityLinePattern.Match(line.Trim());
+        if (!match.Success) return null;
+
+        return new SecurityEvent
+        {
+            Timestamp = match.Groups[1].Value,
+            User = match.Groups[2].Value,
+            Action = match.Groups[3].Value,
+            IP = match.Groups[4].Value
+        };
+    }
 }
 
 // Keep LogEntry here too
@@ -88,4 +107,12 @@ public class LogEntry
     public string Ip { get; set; } = "";
     public string Event { get; set; } = "";
     public DateTime Timestamp { get; set; }
+}
+
+public class SecurityEvent
+{
+    public string Timestamp { get; set; } = "";
+    public string User { get; set; } = "";
+    public string Action { get; set; } = "";
+    public string IP { get; set; } = "";
 }
