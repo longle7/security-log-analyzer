@@ -1,5 +1,4 @@
 ﻿using SecurityLogAnalyzer;
-using Xunit;
 
 public class AnalyzerTests
 {

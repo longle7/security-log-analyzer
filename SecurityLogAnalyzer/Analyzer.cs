@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 
 
-namespace SecurityLogAnalyzer;  // Matches your project
+namespace SecurityLogAnalyzer;
 
 public class Analyzer
 {
@@ -35,22 +35,16 @@ public class Analyzer
         var ipGroups = failedLogins.GroupBy(l => l.Ip)
                                   .Select(g => new { Ip = g.Key, Events = g.OrderBy(l => l.Timestamp).ToList() });
 
-        // One thread and is slow
         var alerts = new List<string>();
         foreach (var group in ipGroups)
         {
             // group consist of {string ip, <List>LogEntry events}
             // group.Events = [10:00, 10:02, 10:05, ..., 10:50]
             var events = group.Events;
-            int count = events.Count;
-
-            // skip over ipGroups where there are less than constWindowLen events
-            if (count < constWindowLen) continue;
-
             // sliding window start position
-            // events.Count - 9 ensures that there are atleast 10 events
-            // IP "192.168.1.5": 3 failed logins → Count=3 → 3-9=-6 → loop skips → safe, no alert
-            // IP "192.168.1.42": 847 fails → 847 - 9 = 838 → 838 windows checked
+            // events.Count - constWindowLen ensures each window has constWindowLen events
+            // IP "192.168.1.5": 3 failed logins → Count=3 → 3-10=-7 → loop skips → safe, no alert
+            // IP "192.168.1.42": 847 fails → 847 - 10 = 837 → 838 windows checked
             for (int i = 0; i <= events.Count - constWindowLen; i++)
             {
                 // Using direct indexing 
@@ -100,7 +94,6 @@ public class Analyzer
     }
 }
 
-// Keep LogEntry here too
 public class LogEntry
 {
     public int Id { get; set; }

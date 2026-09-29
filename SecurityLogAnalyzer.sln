@@ -7,11 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityLogAnalyzer", "Secu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityLogAnalyzer.Tests", "SecurityLogAnalyzer.Tests\SecurityLogAnalyzer.Tests.csproj", "{AB267AB1-E0E5-4193-B210-E3AAD97F3EC4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CB63DD8-71E8-4667-9F90-90A138DF9690}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

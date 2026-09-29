@@ -12,7 +12,6 @@
     <PackageReference Include="coverlet.collector" Version="6.0.4" />
     <!-- 17.13+ only ships build targets for net462/net8.0; 17.12.x is the last version that supports net7.0 -->
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="xunit" Version="2.9.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
